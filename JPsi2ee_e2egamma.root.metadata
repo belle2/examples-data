@@ -1,0 +1,2 @@
+Content: 100000 Y(4S) events with B0 -> J/psi eta
+Purpose: used in analysis/examples/VariableManager/usingMCGenTopo.py, analysis/examples/tutorials/B2A501-BremsCorrection.py, B2A502-WriteOutDecayHash.py, B2A504-TrackingSystematics.py

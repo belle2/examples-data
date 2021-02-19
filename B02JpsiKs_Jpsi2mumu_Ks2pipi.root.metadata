@@ -1,0 +1,3 @@
+Content: 100 Y(4S) events with B0 -> J/psi KS, J/psi -> mu+ mu-, KS -> pi+ pi-
+Purpose: used in analysis/examples/fitting/B2A409-KFit-SmearedIPtube.py, B2A410-TagVertex.py, B2A411-HelixErrorScaler.py
+

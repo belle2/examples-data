@@ -1,0 +1,2 @@
+Content: 2000 Y(4S) events simulated and reconstructed from B2A101-Y4SEventGeneration-evtgen.root, B0bar -> D*+ pi-, B0 -> D0 pi0
+Purpose: used in analysis/examples/fitting/B2A401-KFit-MassFit.py, B2A403-KFit-VertexFit.py, B2A404-Rave-VertexFit.py, B2A405-Rave-MassVertexFit.py, B2A406-Rave-DecayStringVertexFit.py, BtagBsigReconstruction.py
