@@ -1,0 +1,2 @@
+Content: HDF5 file containing detector log-likelihoods, momentum, track angle, and true particle type for 10k simulated single-particle events (ParticleGun module) produced using release-05-02-06
+Purpose: used in analysis/examples/tutorial/B2A913-PrepPIDTrainingSample.py to train PID calibration weights
