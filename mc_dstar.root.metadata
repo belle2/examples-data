@@ -1,0 +1,2 @@
+Content: 10k Dstar events selected from MC14ri_a
+Purpose: used in analysis/examples/PIDCalibration/PrepPIDTrainingSample.py to train PID calibration weights
