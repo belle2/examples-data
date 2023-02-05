@@ -1,0 +1,13 @@
+stages:
+  - update
+
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'push' && $CI_COMMIT_BRANCH == 'main'
+
+build:
+  stage: update
+  tags:
+    - extagent8
+  script:
+    - echo "Update automatically done by triggering this pipeline :D"
