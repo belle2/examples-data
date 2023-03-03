@@ -1,0 +1,4 @@
+dbstore/ParticleReweighting:TestMomentum 1 0,0,1000,1000
+dbstore/ParticleReweighting:TestMomentum2 1 0,0,1000,1000
+dbstore/ParticleReweighting:TestMomentum 2 0,0,1000,1000
+dbstore/ParticleReweighting:TestMomentum2 2 0,0,1000,1000
