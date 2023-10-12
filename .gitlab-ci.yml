@@ -11,7 +11,19 @@ workflow:
     # It is possible to manually trigger this pipeline by setting this variable to 'yes'.
     - if: $GITLAB_FORCE_RUNNING_PIPELINE == 'yes'
 
-build:
+update-extagent4:
+  stage: update
+  tags:
+    - extagent4
+  script:
+    # The purpose of this pipeline is simply updating the folder where the validation-data repository is located.
+    # This is done by simply triggering the pipeline.
+    - echo "Update automatically done by triggering this pipeline :D"
+  after_script:
+    # We do not need to store the .git folder on the runner disk, since we do not trigger this pipeline very often.
+    - rm -rf .git
+
+update-extagent8:
   stage: update
   tags:
     - extagent8
