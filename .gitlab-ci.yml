@@ -8,6 +8,7 @@ workflow:
   rules:
     # Trigger the pipeline only whenever we push new code to the main branch (via merge request).
     #- if: $CI_PIPELINE_SOURCE == 'push' && $CI_COMMIT_BRANCH == 'main'
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
     # It is possible to manually trigger this pipeline by setting this variable to 'yes'.
     - if: $GITLAB_FORCE_RUNNING_PIPELINE == 'yes'
 
