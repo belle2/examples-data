@@ -7,7 +7,7 @@ variables:
 workflow:
   rules:
     # Trigger the pipeline only whenever we push new code to the main branch (via merge request).
-    - if: $CI_PIPELINE_SOURCE == 'push' && $CI_COMMIT_BRANCH == 'main'
+    #- if: $CI_PIPELINE_SOURCE == 'push' && $CI_COMMIT_BRANCH == 'main'
     # It is possible to manually trigger this pipeline by setting this variable to 'yes'.
     - if: $GITLAB_FORCE_RUNNING_PIPELINE == 'yes'
 
@@ -16,21 +16,19 @@ update-extagent4:
   tags:
     - extagent4
   script:
-    # The purpose of this pipeline is simply updating the folder where the validation-data repository is located.
-    # This is done by simply triggering the pipeline.
-    - echo "Update automatically done by triggering this pipeline :D"
+    - git pull
   after_script:
     # We do not need to store the .git folder on the runner disk, since we do not trigger this pipeline very often.
     - rm -rf .git
 
-update-extagent8:
-  stage: update
-  tags:
-    - extagent8
-  script:
-    # The purpose of this pipeline is simply updating the folder where the validation-data repository is located.
-    # This is done by simply triggering the pipeline.
-    - echo "Update automatically done by triggering this pipeline :D"
-  after_script:
-    # We do not need to store the .git folder on the runner disk, since we do not trigger this pipeline very often.
-    - rm -rf .git
+#update-extagent8:
+#  stage: update
+#  tags:
+#    - extagent8
+#  script:
+#    # The purpose of this pipeline is simply updating the folder where the validation-data repository is located.
+#    # This is done by simply triggering the pipeline.
+#    - echo "Update automatically done by triggering this pipeline :D"
+#  after_script:
+#    # We do not need to store the .git folder on the runner disk, since we do not trigger this pipeline very often.
+#    - rm -rf .git
