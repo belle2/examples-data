@@ -17,7 +17,7 @@ update-extagent4:
   tags:
     - extagent4
   script:
-    - git pull
+    - git checkout -f main && git pull
   after_script:
     # We do not need to store the .git folder on the runner disk, since we do not trigger this pipeline very often.
     - rm -rf .git
