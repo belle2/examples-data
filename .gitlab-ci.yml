@@ -7,31 +7,29 @@ variables:
 workflow:
   rules:
     # Trigger the pipeline only whenever we push new code to the main branch (via merge request).
-    #- if: $CI_PIPELINE_SOURCE == 'push' && $CI_COMMIT_BRANCH == 'main'
-    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+    - if: $CI_PIPELINE_SOURCE == 'push' && $CI_COMMIT_BRANCH == 'main'
     # It is possible to manually trigger this pipeline by setting this variable to 'yes'.
     - if: $GITLAB_FORCE_RUNNING_PIPELINE == 'yes'
+
+before_script:
+  - git lfs install
+  - git fetch --all
+  - git checkout -f main
+
+after_script:
+  # We do not need to store the .git folder on the runner disk, since we do not trigger this pipeline very often.
+  - rm -rf .git
 
 update-extagent4:
   stage: update
   tags:
     - extagent4
   script:
-    - git lfs install
-    - git fetch --all
-    - git checkout -f main
-  after_script:
-    # We do not need to store the .git folder on the runner disk, since we do not trigger this pipeline very often.
-    - rm -rf .git
+    - echo "Pipeline successfully triggered on extagent4"
 
 update-extagent8:
   stage: update
   tags:
     - extagent8
   script:
-    - git lfs install
-    - git fetch --all
-    - git checkout -f main
-  after_script:
-    # We do not need to store the .git folder on the runner disk, since we do not trigger this pipeline very often.
-    - rm -rf .git
+    - echo "Pipeline successfully triggered on extagent8"
