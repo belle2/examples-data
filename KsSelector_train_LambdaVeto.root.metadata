@@ -1,2 +1,2 @@
-Content: ttree of Ks candidates produced from generic MC. 120k: signal (isSignal==1) 120k: Lambda, 120k: anti-Lambda (mcPDG: 3122) (120k = 20k x {uu/dd/ss/ccbar, mixed, charged})
+Content: ttree of Ks candidates produced from generic MC. 24k: signal (isSignal==1) 24k: Lambda, 24k: anti-Lambda (mcPDG: 3122) (24k = 4k x {uu/dd/ss/ccbar, mixed, charged})
 Purpose: used in analysis/examples/tutorials/B2A912-TrainKsSelector.py to train LambdaVeto
