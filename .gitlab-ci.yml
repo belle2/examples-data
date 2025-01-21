@@ -20,12 +20,12 @@ after_script:
   # We do not need to store the .git folder on the runner disk, since we do not trigger this pipeline very often.
   - rm -rf .git
 
-update-b2-gitlab-runner1:
+update-gitlab-runner1:
   stage: update
   tags:
-    - b2-gitlab-runner1
+    - gitlab-runner1
   script:
-    - echo "Pipeline successfully triggered on b2-gitlab-runner1"
+    - echo "Pipeline successfully triggered on gitlab-runner1"
 
 update-extagent4:
   stage: update
