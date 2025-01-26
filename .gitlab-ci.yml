@@ -27,9 +27,9 @@ update-gitlab-runner1:
   script:
     - echo "Pipeline successfully triggered on gitlab-runner1"
 
-update-extagent4:
+update-gitlab-runner2:
   stage: update
   tags:
-    - extagent4
+    - gitlab-runner2
   script:
-    - echo "Pipeline successfully triggered on extagent4"
+    - echo "Pipeline successfully triggered on gitlab-runner2"
