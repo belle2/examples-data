@@ -1,2 +1,2 @@
-Content: ttree of Lambda candidates produced from generic MC15 rd. ~1M: signal (isSignal==1), ~1M: Ks background (isSignal==0). (Here, 1M is allocated to the corresponding selected events according to the total number of MC15rd events of each type {uu/dd/ss/ccbar, mixed, charged})
-Purpose: used in analysis/examples/tutorials/B2A916-TrainLambdaSelector.py to train KsVeto
+Content: ttree of Lambda candidates produced from generic MC15 rd. ~10K: signal (isSignal==1), ~10K: Ks background (isSignal==0). (Here, 1M is allocated to the corresponding selected events according to the total number of MC15rd events of each type {uu/dd/ss/ccbar, mixed, charged})
+Purpose: used in analysis/examples/V0Selector/TrainLambdaSelector.py to train KsVeto
